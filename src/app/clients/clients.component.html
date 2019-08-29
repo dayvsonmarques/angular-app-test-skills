@@ -1,0 +1,28 @@
+<div class="container content-clients" *ngIf="clients">
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>  
+                        <th scope="col">Name</th>  
+                        <th scope="col">Email</th>  
+                        <th scope="col">Company</th>  
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let c of clients">
+                        <th scope="row">{{ c.id }}</th>
+                        <td>{{ c.name }}</td>
+                        <td>{{ c.email }}</td>
+                        <td>{{ c.company.name }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="alert alert-danger" *ngIf="!clients">
+    <span>Nenhum cliente foi encontrado.</span>
+</div> -->
